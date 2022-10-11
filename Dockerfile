@@ -2,7 +2,7 @@
 FROM node:14-buster as builder
 WORKDIR /src
 COPY . /src
-RUN yarn install --legacy-peer-deps
+RUN yarn install --legacy-peer-deps --ignore-engines
 RUN yarn run build
 
 # App
